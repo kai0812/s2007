@@ -40,8 +40,8 @@
         header img {
             max-width: 100px;
             height: auto;
-            margin-top: 20px; /* Увеличен отступ для логотипа */
-            margin-bottom: 20px; /* Увеличен отступ для логотипа */
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
 
         nav {
@@ -77,16 +77,16 @@
         .clothing-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 30px; /* Увеличено расстояние между элементами */
+            gap: 30px;
             justify-content: center;
             padding: 30px;
         }
 
         .clothing-container {
-            flex: 1 1 calc(50% - 40px); /* Элементы занимают половину ширины и адаптируются */
-            max-width: 500px; /* Увеличена максимальная ширина */
-            padding: 30px; /* Внутренний отступ */
-            border-radius: 15px; /* Радиус углов */
+            flex: 1 1 calc(50% - 40px); 
+            max-width: 500px;
+            padding: 30px;
+            border-radius: 15px;
             text-align: center;
             box-shadow: none;
             background-color: transparent;
@@ -125,7 +125,7 @@
         }
 
         .clothing-info h2 {
-            font-size: 24px; /* Увеличен размер шрифта */
+            font-size: 24px;
             font-weight: 700;
             margin-top: 20px;
             cursor: pointer;
@@ -139,13 +139,80 @@
         }
 
         .no-animation .clothing-images:hover .front {
-            opacity: 1; /* Передняя сторона остается видимой */
+            opacity: 1;
         }
 
         .no-animation .clothing-images:hover .back {
-            opacity: 0; /* Задняя сторона остается скрытой */
+            opacity: 0;
         }
 
+        /* Медиазапросы для адаптивности */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav {
+                margin-top: 10px;
+                gap: 10px;
+                justify-content: center;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            header img {
+                max-width: 80px;
+            }
+
+            .clothing-container {
+                flex: 1 1 calc(50% - 20px); /* Элементы займут половину ширины */
+                max-width: 300px; /* Уменьшение максимальной ширины */
+                padding: 20px;
+            }
+
+            .clothing-info h2 {
+                font-size: 20px;
+            }
+
+            .bottom-logo {
+                max-width: 80px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 10px;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            nav a {
+                font-size: 10px;
+            }
+
+            header img {
+                max-width: 70px;
+            }
+
+            .clothing-container {
+                flex: 1 1 100%;
+                max-width: 100%;
+                padding: 15px;
+            }
+
+            .clothing-info h2 {
+                font-size: 18px;
+            }
+
+            .bottom-logo {
+                max-width: 70px;
+            }
+        }
     </style>
 </head>
 <body>
