@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S20007</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 10px 20px;
+        }
+
+        .nav-container {
+            position: absolute;
+            top: 0;
+            left: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            z-index: 1;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #000000;
+            font-size: 14px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            opacity: 0.5;
+        }
+
+        header img {
+            max-width: 100px;
+            height: auto;
+            margin-top: 0;
+        }
+
+        .bottom-image {
+            margin-top: 20px;
+            max-width: 80%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .bottom-logo {
+            margin-top: auto;
+            margin-bottom: 80px;
+            max-width: 100px;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <!-- Левая часть навигации -->
+            <nav>
+                <a href="/Users/kai/Desktop/site/main-menu/main-menu.html">HOME</a>
+                <a href="/Users/kai/Desktop/site/clohtes-menu/clothes-menu.html">CLOTHES</a>
+                <a href="/Users/kai/Desktop/site/lookbooks-menu/lookbooks-menu.html">LOOKBOOKS</a>
+                <a href="/Users/kai/Desktop/site/aboutus-menu/aboutus-menu.html">ABOUT US</a>
+            </nav>
+            
+            <!-- Логотип в центре -->
+            <img src="/Users/kai/Desktop/site/main-menu/sitelogo.png" alt="Логотип">
+            
+            <!-- Правая часть навигации -->
+            <nav>
+                <a href="https://www.instagram.com/anora1981729420071e991/">INSTAGRAM</a>
+                <a href="https://t.me/syx2007army">TELEGRAM</a>
+                <a href="https://www.youtube.com/@last.memories2007">YOUTUBE</a>
+            </nav>
+        </div>
+        
+        <!-- Картинка под логотипом -->
+        <img id="changingImage" src="/Users/kai/Desktop/site/main-menu/AROUND ME.MODEL- @blombolma .SYX2007ARMY (3).jpg" alt="Картинка под логотипом" class="bottom-image">
+    </header>
+
+    <img src="/Users/kai/Desktop/site/main-menu/logo3 (1).jpg" alt="Логотип" class="bottom-logo">
+
+</body>
+</html>
