@@ -80,6 +80,62 @@
             margin-left: auto;
             margin-right: auto;
         }
+
+        /* Медиазапросы для адаптивности */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav {
+                margin-top: 10px;
+                gap: 10px;
+                justify-content: center;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            header img {
+                max-width: 80px;
+            }
+
+            .bottom-image {
+                max-width: 90%;
+            }
+
+            .bottom-logo {
+                max-width: 80px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 10px;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            nav a {
+                font-size: 10px;
+            }
+
+            header img {
+                max-width: 70px;
+            }
+
+            .bottom-image {
+                max-width: 95%;
+            }
+
+            .bottom-logo {
+                max-width: 70px;
+            }
+        }
     </style>
 </head>
 <body>
