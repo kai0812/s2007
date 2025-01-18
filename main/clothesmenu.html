@@ -28,9 +28,9 @@
 
         .nav-container {
             position: absolute;
-            top: 10;
-            left: 20px;
-            right: 20px;
+            top: 10px;
+            left: 0;
+            right: 0;
             display: flex;
             justify-content: space-between;
             width: 100%;
@@ -40,7 +40,8 @@
         header img {
             max-width: 100px;
             height: auto;
-            margin-top: 0;
+            margin-top: 20px; /* Увеличен отступ для логотипа */
+            margin-bottom: 20px; /* Увеличен отступ для логотипа */
         }
 
         nav {
@@ -61,6 +62,7 @@
             opacity: 0.5;
         }
 
+        /* Контейнер для нижнего логотипа */
         .bottom-logo {
             margin-top: auto;
             margin-bottom: 80px;
@@ -137,11 +139,11 @@
         }
 
         .no-animation .clothing-images:hover .front {
-         opacity: 1; /* Передняя сторона остается видимой */
-         }
+            opacity: 1; /* Передняя сторона остается видимой */
+        }
 
         .no-animation .clothing-images:hover .back {
-        opacity: 0; /* Задняя сторона остается скрытой */
+            opacity: 0; /* Задняя сторона остается скрытой */
         }
 
     </style>
@@ -154,20 +156,17 @@
                 <a href="clothesmenu.html">CLOTHES</a>
                 <a href="lookbookmenu.html">LOOKBOOKS</a>
                 <a href="aboutus.html">ABOUT US</a>
-            <nav>
+            </nav>
 
             <nav>
                 <a href="https://www.instagram.com/anora1981729420071e991/">INSTAGRAM</a>
                 <a href="https://t.me/syx2007army">TELEGRAM</a>
                 <a href="https://www.youtube.com/@last.memories2007">YOUTUBE</a>
             </nav>
-
         </div>
         <img src="https://imagizer.imageshack.com/v2/1165x110q70/r/923/ivCNH5.png" alt="Логотип">
-
     </header>
 
-    <!-- Список элементов одежды -->
     <div class="clothing-list">
         <div class="clothing-container">
             <div class="clothing-images">
@@ -279,8 +278,5 @@
     </div>
 
     <img src="https://imagizer.imageshack.com/v2/1165x655q70/r/922/Xzk1G0.jpg" alt="Логотип" class="bottom-logo">
-
-
-
 </body>
 </html>
