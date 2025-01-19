@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro Animation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100%;
+            font-family: 'Roboto', sans-serif;
+            overflow: hidden;
+        }
+
+        /* Заставка */
+        .intro {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://imagizer.imageshack.com/v2/1165x644q70/r/924/frXeFc.png') no-repeat center center;
+            background-size: cover; /* Изображение будет растягиваться, чтобы покрыть весь экран */
+            background-color: #000; /* Фон для пустых участков, если изображение не покроет весь экран */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+            z-index: 1000;
+            cursor: pointer; /* Сделать картинку кликабельной */
+        }
+
+        .intro.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Заставка с изображением -->
+    <div class="intro" onclick="enterSite()">
+        <!-- Фотография на весь экран будет действовать как кнопка -->
+    </div>
+
+    <script>
+        // Обработчик нажатия Enter или клика на фотографию
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') {
+                enterSite();
+            }
+        });
+
+        function enterSite() {
+            const intro = document.querySelector('.intro');
+            intro.classList.add('hidden'); // Скрыть заставку с анимацией
+            setTimeout(function() {
+                window.location.href = 'mainmenu.html'; // Замените на адрес главной страницы
+            }, 1000); // Задержка для анимации
+        }
+    </script>
+</body>
+</html>
