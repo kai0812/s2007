@@ -23,43 +23,46 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            padding: 20px 10px;
             position: relative;
-            padding: 10px 20px;
         }
 
         .nav-container {
-            position: absolute;
-            top: 10px;
-            left: 0;
-            right: 0;
             display: flex;
             justify-content: space-between;
+            align-items: center;
             width: 100%;
-            z-index: 1;
+            position: relative;
         }
 
-       header img {
-            max-width: 100px;
-            height: auto;
-            margin-top: 0;
-        }
-
-        nav {
+        .nav-container nav {
             display: flex;
             gap: 20px;
         }
 
-        nav a {
+        .nav-container nav a {
             text-decoration: none;
             color: #000000;
-            font-size: 10px;
+            font-size: 12px;
             padding: 5px 10px;
             border-radius: 5px;
             transition: opacity 0.3s ease-in-out;
         }
 
-        nav a:hover {
+        .nav-container nav a:hover {
             opacity: 0.5;
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0); /* Центрирование по горизонтали */
+        }
+
+        .logo-container img {
+            max-width: 100px;
+            height: auto;
         }
 
         .slideshow-container {
@@ -81,77 +84,12 @@
         .slideshow-container img.active {
             opacity: 1;
         }
-
-        .bottom-logo {
-            margin-top: auto;
-            margin-bottom: 80px;
-            max-width: 100px;
-            height: auto;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Медиазапросы для адаптивности */
-        @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            nav {
-                margin-top: 10px;
-                gap: 10px;
-                justify-content: center;
-            }
-
-            nav a {
-                font-size: 12px;
-            }
-
-            header img {
-                max-width: 80px;
-            }
-
-            .slideshow-container {
-                max-width: 90%;
-            }
-
-            .bottom-logo {
-                max-width: 80px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .nav-container {
-                padding: 10px;
-            }
-
-            nav {
-                gap: 15px;
-            }
-
-            nav a {
-                font-size: 10px;
-            }
-
-            header img {
-                max-width: 70px;
-            }
-
-            .slideshow-container {
-                max-width: 95%;
-            }
-
-            .bottom-logo {
-                max-width: 70px;
-            }
-        }
     </style>
 </head>
 <body>
     <header>
         <div class="nav-container">
+            <!-- Левое меню -->
             <nav>
                 <a href="mainmenu.html">HOME</a>
                 <a href="clothesmenu.html">CLOTHES</a>
@@ -159,17 +97,19 @@
                 <a href="aboutus.html">ABOUT US</a>
             </nav>
 
-            <!-- Логотип в центре -->
-                    <img src="https://imagizer.imageshack.com/v2/1165x655q70/r/924/rxIbn1.png" alt="Логотип" style="position: relative; left: -40px;">
+            <!-- Логотип -->
+            <div class="logo-container">
+                <img src="https://imagizer.imageshack.com/v2/1165x655q70/r/924/rxIbn1.png" alt="Логотип">
+            </div>
 
-
-          <nav>
+            <!-- Правое меню -->
+            <nav>
                 <a href="https://www.instagram.com/anora1981729420071e991/">INSTAGRAM</a>
                 <a href="https://t.me/syx2007army">TELEGRAM</a>
                 <a href="https://www.youtube.com/@last.memories2007">YOUTUBE</a>
             </nav>
         </div>
-    
+
         <!-- Слайдшоу -->
         <div class="slideshow-container">
             <img src="https://imagizer.imageshack.com/v2/1165x655q70/r/922/ngbFRY.jpg" alt="Фото 1" class="active">
@@ -177,7 +117,6 @@
             <img src="https://imagizer.imageshack.com/v2/1165x655q70/r/924/t4Kj0v.jpg" alt="Фото 3">
         </div>
     </header>
-
 
     <script>
         const slides = document.querySelectorAll('.slideshow-container img');
