@@ -62,14 +62,26 @@
             margin-top: 0;
         }
 
-        .bottom-image {
-            margin-top: 40px; /* Увеличьте значение для большего отступа */
-            max-width: 80%;
+        .slideshow-container {
+            position: relative;
+            width: 80%;
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .slideshow-container img {
+            max-width: 100%;
             height: auto;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }    
+            position: absolute;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slideshow-container img.active {
+            opacity: 1;
+        }
+
         .bottom-logo {
             margin-top: auto;
             margin-bottom: 80px;
@@ -101,7 +113,7 @@
                 max-width: 80px;
             }
 
-            .bottom-image {
+            .slideshow-container {
                 max-width: 90%;
             }
 
@@ -127,7 +139,7 @@
                 max-width: 70px;
             }
 
-            .bottom-image {
+            .slideshow-container {
                 max-width: 95%;
             }
 
@@ -159,10 +171,25 @@
             </nav>
         </div>
     
-        <!-- Картинка под логотипом -->
-        <img id="changingImage" src="https://imagizer.imageshack.com/v2/846x635q70/r/922/gUYeQr.jpg" alt="Картинка под логотипом" class="bottom-image">
+        <!-- Слайдшоу -->
+        <div class="slideshow-container">
+            <img src="https://imagizer.imageshack.com/v2/1165x655q70/r/924/gEI6np.jpg" alt="Фото 1" class="active">
+            <img src="https://imagizer.imageshack.com/v2/1165x655q70/r/923/2sjhwa.jpg" alt="Фото 2">
+            <img src="https://imagizer.imageshack.com/v2/1165x655q70/r/922/ktY6Wb.png" alt="Фото 3">
+        </div>
     </header>
 
     <img src="https://imagizer.imageshack.com/v2/1165x655q70/r/922/Xzk1G0.jpg" alt="Логотип" class="bottom-logo">
+
+    <script>
+        const slides = document.querySelectorAll('.slideshow-container img');
+        let currentSlide = 0;
+
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, 5000);
+    </script>
 </body>
 </html>
