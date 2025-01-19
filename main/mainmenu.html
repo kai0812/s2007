@@ -29,14 +29,19 @@
 
         .nav-container {
             position: absolute;
-            top: 0;
-            left: 20px;
-            right: 20px;
+            top: 10px;
+            left: 0;
+            right: 0;
             display: flex;
             justify-content: space-between;
-            align-items: center;
             width: 100%;
             z-index: 1;
+        }
+
+       header img {
+            max-width: 100px;
+            height: auto;
+            margin-top: 0;
         }
 
         nav {
@@ -57,12 +62,16 @@
             opacity: 0.5;
         }
 
-        header img {
+        /* Контейнер для нижнего логотипа */
+        .bottom-logo {
+            margin-top: auto;
+            margin-bottom: 80px;
             max-width: 100px;
             height: auto;
-            margin-top: 0;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
-
         .slideshow-container {
             position: relative;
             width: 80%;
