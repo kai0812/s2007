@@ -127,6 +127,42 @@
             color: #555;
         }
 
+        /* Стили для выпадающего меню */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            padding: 10px;
+            z-index: 10;
+            background-color: transparent; /* Прозрачный фон */
+            border: none; /* Убирает обводку */
+            box-shadow: none; /* Убирает тень */
+        }
+
+        .dropdown-menu a {
+            display: block;
+            text-decoration: none;
+            color: #000000;
+            font-size: 10px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Активное состояние для выпадающего меню */
+        .dropdown.active .dropdown-menu {
+            display: block;
+        }
+
         @media (max-width: 768px) {
             .clothing-list {
                 grid-template-columns: repeat(2, 1fr); /* 2 в ряд */
@@ -142,13 +178,24 @@
 </head>
 <body>
     <header>
-        <div class="nav-container">
+         <div class="nav-container">
             <nav>
                 <a href="main.html">HOME</a>
                 <a href="clothes.html">CLOTHES</a>
-                <a href="lookbooks.html">LOOKBOOKS</a>
+
+                <!-- Выпадающее меню -->
+                <div class="dropdown">
+                    <a class="dropdown-toggle">LOOKBOOKS</a>
+                    <div class="dropdown-menu">
+                        <a href="senseless.html">SENSELESS</a>
+                        <a href="aroundme.html">AROUND ME</a>
+                        <a href="sarrowbody.html">SARROW BODY</a>
+                    </div>
+                </div>
+
                 <a href="about.html">ABOUT US</a>
             </nav>
+            
             <nav>
                 <a href="https://www.instagram.com/melancholyofloneliness/">INSTAGRAM</a>
                 <a href="https://t.me/syx2007army">TELEGRAM</a>
